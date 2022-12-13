@@ -2,18 +2,22 @@ import styles from './home.module.css';
 import styled from 'styled-components';
 import { Card } from '../components/card';
 import { Vector, Values as ValueSvg, Vision } from './svg';
+import NavBar from '../components/navbar';
 const Home = () => {
   return (
-    <Contianer>
-      {cardObject.map((item, index) => (
-        <Card
-          icon={item.icon}
-          title={item.title}
-          description={item.description}
-          key={item.id}
-        />
-      ))}
-    </Contianer>
+    <>
+      <NavBar />
+      <Contianer>
+        {cardObject.map((item, index) => (
+          <Card
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+            key={item.id}
+          />
+        ))}
+      </Contianer>
+    </>
   );
 };
 export { Home };

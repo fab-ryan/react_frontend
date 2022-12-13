@@ -1,7 +1,15 @@
 import './App.css';
 import { Home } from './pages/home';
-function App() {
-  return <Home name='umuliza' username='divine' />;
-}
-
-export default App;
+import Login from './pages/login';
+import { createBrowserRouter } from 'react-router-dom';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+]);
+export default router;
